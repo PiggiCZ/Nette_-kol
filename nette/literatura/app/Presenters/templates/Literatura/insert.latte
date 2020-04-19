@@ -1,0 +1,17 @@
+{* Šablona pro vložení nové akce *}
+{block content}
+<h2 class="text-center bg-secondary text-white p-3">Nová akce</h2>
+{* Použití šablony form.latte pro zobrazení formuláře akceForm pomocí 
+  renderovací definice bootstrap-form *}
+{import '../components/form.latte'}
+{include bootstrap-form literaturaForm}
+{* control akceForm *}
+{/block}
+
+{block scripts}
+{include parent}
+{/block}
+
+
+{block head}
+{/block}

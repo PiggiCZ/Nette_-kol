@@ -1,0 +1,33 @@
+{block content}
+	<div class="row">
+		<table class="table table-brodered table-striped">
+			<thead>
+				<tr>
+					<th><a n:href="literatura:default 'title'">Název díla</a></th>
+					<th><a n:href="literatura:default 'author'">Autor</a></th>
+					<th><a n:href="literatura:default 'year'">Rok vzniku</a></th>
+					<th><a n:href="literatura:default 'category'">Literární druh</a></th>
+					<th>Akce</th>
+				</tr>
+			</thead>
+			<tbody>
+				{foreach $autori as $autor}
+				<tr>
+					<td class="text-right">{$autor->title}</td>
+					<td class="text-right">{$autor->author}</td>
+					<td class="text-right">{$autor->year}</td>
+					<td class="text-center">{$autor->category}</td>
+					<td class="text-center"><button type="button" lass="btn btn-danger">Odstranění</button> <button type="button" class="btn btn-default">Editace</button></td>
+				</tr>
+				{/foreach}
+			</tbody>
+		</table>
+	</div>
+{/block}
+
+{block scripts}
+{include parent}
+{/block}
+
+{block head}
+{/block}
